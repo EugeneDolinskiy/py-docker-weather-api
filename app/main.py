@@ -20,7 +20,8 @@ def get_weather() -> None:
             condition = weather_data["current"]["condition"]["text"]
             temp_c = weather_data["current"]["temp_c"]
             time = weather_data["location"]["localtime"]
-            print(f"{CITY}/{COUNTRY} {time} Weather: {temp_c} Celsius, {condition}")
+            print(f"{CITY}/{COUNTRY} {time}"
+                  f"Weather: {temp_c} Celsius, {condition}")
         else:
             print(f"Error: {response.status_code}, {response.text}")
     except Exception as e:
